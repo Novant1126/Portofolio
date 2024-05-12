@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #FFF2E1;
+        }
+
+        .navbar {
+            background-color: #fff7fcf5;
+            color: aqua;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            padding-top: 60px;
+        }
+
+
+        .home-1 {
+            margin: auto;
+            /*Mengatur margin secara otomatis agar elemen berada di tengah */
+            max-width: 500px;
+            /* Membatasi lebar maksimum elemen */
+            padding-top: 150px;
+            /* Memberikan jarak di atas elemen */
+            padding-right: 20 px;
+        }
+
+        .home-text {
+            color: black;
+        }
+
+        h1 {
+            margin-bottom: 2px;
+        }
+
+        h2 {
+            font-weight: bold;
+            color: #0C0C0C;
+        }
+
+        h4 {
+            color: #FFAF45;
+        }
+
+        h6 {
+            font-weight: bold;
+            color: #070F2B;
+        }
+
+
+        .download-cv-btn {
+            background-color: #FB6D48;
+            color: white;
+        }
+
+        .download-cv-btn:hover {
+            background-color: #673F69;
+            /* Warna latar belakang saat tombol disorot */
+            color: white;
+        }
+
+        .download-cv-btn:active {
+            background-color: #FF5733;
+            /* Warna latar belakang saat tombol sedang diklik */
+            color: #FFFFFF;
+            /* Warna teks saat tombol sedang diklik */
+        }
+
+        .icon {
+            padding-top: 150px;
+            font-size: 22px;
+            /* Atur ukuran ikon sesuai kebutuhan */
+        }
+
+        .icon a {
+            margin-right: 10px;
+            margin-left: 30px;
+            color: #FF5733;
+            padding-bottom: 37px;
+        }
+
+        .about {
+            padding-top: 30px;
+        }
+
+        .abaout-1 {
+            max-width: 600px;
+            /* Membatasi lebar maksimum elemen */
+            padding-top: 0px;
+            /* Memberikan jarak di atas elemen */
+            padding-right: 70px;
+        }
+
+        .hobi {
+            margin-bottom: 65px;
+        }
+
+        .icon-2 {
+            font-size: 16px;
+            /* Atur ukuran ikon sesuai kebutuhan */
+            padding-top: 5px;
+        }
+
+        .icon-2 a {
+            margin-right: 15px;
+            /* Menambahkan margin di sebelah kanan setiap ikon */
+            color: #FFF7FC;
+        }
+
+        .icon-3 {
+            font-size: 16px;
+            /* Atur ukuran ikon sesuai kebutuhan */
+            padding-top: 5px;
+        }
+
+        .icon-3 a {
+            margin-right: 15px;
+            /* Menambahkan margin di sebelah kanan setiap ikon */
+            color: #FFF7FC;
+        }
+
+        #about {
+            background-color: #FF5733;
+        }
+
+        #skills {
+            background-color: #2e2e36;
+            color: #ffffff;
+        }
+
+        .skills-1 {
+            padding-top: 30px;
+        }
+
+        .box {
+            width: 450px;
+            height: 350px;
+            background-color: #ffffff;
+            border: 1px solid #FF5733;
+            padding: 20px;
+            border-radius: 10px;
+            margin: auto;
+            /* Atur jari-jari lengkung sudut */
+        }
+
+        .box-2 {
+            width: 450px;
+            height: 500px;
+            background-color: #ffffff;
+            border: 1px solid #FF5733;
+            padding: 20px;
+            border-radius: 10px;
+            margin: auto;
+            /* Atur jari-jari lengkung sudut */
+        }
+
+        .box-3 {
+            width: 600px;
+            height: 650px;
+            /* background-color: #ffffff; */
+            /* border: 1px solid #FF5733; */
+            padding: 20px;
+            border-radius: 10px;
+            margin: auto;
+            /* Atur jari-jari lengkung sudut */
+            margin-bottom: 40px;
+        }
+
+        .section {
+            border-bottom: 1px solid #ccc;
+            /* Tambahkan garis bawah */
+            padding-bottom: 20px;
+            /* Atur ruang di bawah setiap bagian */
+            margin-bottom: 20px;
+            /* Atur ruang di bawah setiap bagian */
+        }
+
+        .Employment {
+            font-size: small;
+            padding-left: 50px;
+            /* Menambahkan tab menggunakan padding */
+
+        }
+
+        .footer-p {
+            text-align: center;
+        }
+
+        #footer {
+            background-color: #2e2e36;
+            color: #FFFFFF;
+        }
+
+        .fs-3 {
+            padding-left: 50px;
+        }
+
+        .fs-4 {
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        .fs-6 {
+            text-align: center;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 2 kolom */
+            grid-gap: 20px;
+            /* Jarak antar kartu */
+        }
+
+        .card {
+            width: 100%;
+            /* Lebar kartu */
+        }
+
+        /* Atur tampilan untuk layar kecil (ukuran < 768px) */
+        @media (max-width: 767.98px) {
+            .box-2 {
+                margin-top: 20px;
+                /* Tambahkan margin atas untuk jarak antara box */
+            }
+        }
+
+        /* Atur tampilan untuk layar medium (ukuran 768px - 991.98px) */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .col-md-6 {
+                margin-bottom: 20px;
+                /* Tambahkan margin bawah pada setiap kolom untuk jarak antara box */
+            }
+        }
+    </style>
+
+    <title>Home</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img alt="#" src="IMG/Logo-2.png" Bootstrap" width="25" height="Auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse  justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#header">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#pendidikan">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="header">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-6 order-md-2">
+                    <div class="hello">
+                        <div class="home-1 mt-1">
+                            <h4>-- Hello,<span class="home-text"> I'm</span></h4>
+                            <h1>Novant Nanda Pradana</h1>
+                            <h6>Multimedia Design | Front End Developer</h6>
+                            <button class="btn download-cv-btn">Download CV</button>
+                            <div class="icon d-flex justify-content-center">
+                                <a rel="noopener" href="https://www.linkedin.com/" target="_blank" class="me-2">
+                                    <i class="fab fa-linkedin fa-lg"></i>
+                                </a>
+                                <a rel="noopener" href="https://www.instagram.com/" target="_blank" class="me-2">
+                                    <i class="fab fa-instagram fa-lg"></i>
+                                </a>
+                                <a rel="noopener" href="https://www.tiktok.com/" target="_blank" class="me-2">
+                                    <i class="fab fa-tiktok fa-lg"></i>
+                                </a>
+                                <a rel="noopener" href="https://twitter.com/" target="_blank">
+                                    <i class="fab fa-twitter fa-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <div class="photo">
+                        <img src="IMG/Novant-3.png" class="img-fluid" alt="Novant Nanda Pradana" width="400"
+                            height="Auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="2">
+                            <div class="abaout-1">
+                                <h6>ABOUT ME</h6>
+                                <h2>Come on, get to know me</h2>
+                                <p>I am an active 4th semester student at Pelita Bangsa University Cikarang, I am taking
+                                    Informatics Engineering study program. I have pretty good communication skills, I
+                                    also easily adapt to new environments or things. I have skills in the field of
+                                    visual designer, and a little experience in photography. I can operates Microsoft,
+                                    design applications, and is studying the world of Engineering Informatics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-5">
+                        <div class="abaout-2">
+                            <h6><br></h6>
+                            <h2>Come on, Make Friends</h2>
+                            <p>I have active social media that I use, I can visit and follow my activities</p>
+                            <div class="icon-2 d-flex">
+                                <a rel="noopener" href="https://www.linkedin.com/" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a rel="noopener" href="https://www.instagram.com/" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a rel="noopener" href="https://www.tiktok.com/" target="_blank">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                                <a rel="noopener" href="https://twitter.com/" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="hobi">
+                    <h6>HOBBY</h6>
+                    <h2>I have quite an exciting hobby, you know!!</h2>
+                    <p>This hobby refers to activities that involve exploring the outdoors, especially by climbing
+                        mountains and enjoying the views at high altitudes. It is an activity that allows one to feel
+                        close to nature, explore its beauty, and find serenity amidst the silence of the mountains.
+                        Through this activity, a person can enjoy the sensation of adventure, feel physical fitness, and
+                        find moments of beauty when the sun sets at the height of the mountain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pendidikan">
+        <div class="container">
+            <div class="pendidikan-head">
+                <div class="section">
+                    <h5 class="fs-4">Educational History</h5>
+                    <p class="fs-6">Saya Belajar dunia teknologi kurang lebih 4 tahun, dari
+                        belajar Multimedia sampai sekarang dunia Informatika developer</p>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-6">
+                    <h5 class="fs-3">Pendidikan Formal</h5>
+                    <div class="box">
+                        <div class="section">
+                            <h5 class="fs-2">Universitas Pelita Bangsa</h5>
+                            <h6>Jurusan Teknik Informatika</h6>
+                            <p>Tahun Angkatan 2022 - Sekarang</p>
+                        </div>
+                        <div class="section">
+                            <h5 class="fs-2">SMK Negeri 1 Kersana</h5>
+                            <h6>Jurusan Multimedia</h6>
+                            <p>Tahun Angkatan 2018 - 2021 <br> Nilai Ujian Nasional : 3.7</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-2 mt-md-0"> <!-- Menambahkan margin atas hanya pada tata letak seluler -->
+                    <h5 class="fs-3">Pendidikan Non-Formal</h5>
+                    <div class="box">
+                        <div class="section">
+                            <h5 class="fs-2">Workshop</h5>
+                            <h6>“Machine Learning and AI For Beginner”</h6>
+                            <p>Tahun 2023</p>
+                        </div>
+                        <div class="section">
+                            <h5 class="fs-2">Seminar Nasional</h5>
+                            <h6>“Sains dan Teknologi SAINTEK"</h6>
+                            <p>Tahun 2022 <br><br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section"><br></div>
+            <div class="pendidikan-body">
+                <div class="section">
+                    <h5 class="fs-4">Employment History</h5>
+                    <p class="fs-6">Saya, memiliki minat dan bekerja dengan profesional, dan
+                        saya memiliki kemampuan komunikasi yang cukup baik, saya juga mudah beradaptasi di lingkungan
+                        atau pun hal baru. Saya memiliki keterampilan di bidang visual disainer, dan sedikit pengalaman
+                        di photografy. Saya mampu mengoprasikan Microsoft, aplikasi desain, dan sedang mempelajari dunia
+                        sistem informatika.</p>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-6">
+                    <div class="box-2">
+                        <div class="section">
+                            <h5 class="fs-2">Golden Lamian</h5>
+                            <h6>Bidang Kuliner</h6>
+                            <p>2021 - Front Crew</p>
+                            <ul class="Employment">
+                                <li>Mampu memberikan penawaran menarik pada pelanggan</li>
+                                <li>Memberikan pelayanan kepada pelangan dengan ramah dan profesional</li>
+                                <li>Memahami kebutuhan pelanggan</li>
+                                <li>Menjaga kebersihan outlet atau tempat kerja</li>
+                            </ul>
+                        </div>
+                        <div class="section">
+                            <p>2021 - Kicen Crew</p>
+                            <ul class="Employment">
+                                <li>Mengelola ketersediaan stok makanan</li>
+                                <li>Memeriksa bahan makanan berkualitas dan fress </li>
+                                <li>Memeriksa ketersediaan bahan-bahan dapur</li>
+                                <li>Mempersiapkan ketersediaan bahan makanan harian.</li>
+                                <li>Menyajikan makanan sesuai standar SOP restoran.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="box-2">
+                        <div class="section">
+                            <h5 class="fs-2">Wirausaha Kantin</h5>
+                            <h6>PT. Surya Tekologi Industri</h6>
+                            <p>2021 - Front Crew</p>
+                            <ul class="Employment">
+                                <li>Bertanggung jawab dalam penyediaan stok barang, meliputi perencanaan, pembelian, dan
+                                    pemantauan kebutuhan harian.</li>
+                                <li>Melakukan proses pembelian barang sesuai dengan kebutuhan, termasuk negosiasi harga
+                                    dengan pemasok</li>
+                                <li>Mengelola keuangan pemasukan dan pengeluaran untuk memastikan ketersediaan stok
+                                    barang yang memadai. </li>
+                                <li>Berperan dalam pemantauan dan pengaturan pengiriman barang dari pemasok, serta
+                                    memastikan kualitas dan ketepatan
+                                <li>Berperan dalam pemantauan dan pengaturan pengiriman barang dari pemasok, serta
+                                    memastikan kualitas dan ketepatan waktu pengiriman</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h1><br><br></h1>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <div class="skills">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="skills">
+                            <div class="skills-1">
+                                <h6 id="skills">SKILLS</h6>
+                                <div class="section">
+                                    <h2 id="skills">Desain Grafis</h2>
+                                    <h5>Mengoprasikan :</h5>
+                                    <ul class="skills">
+                                        <li>Sofwere CorelDraw</li>
+                                        <li>Sofwere Canva</li>
+                                        <li>Sofwere Adobe Premier CC</li>
+                                        <li>Sofwere Adobe Audition</li>
+                                        <li>Sofwere Adobe Audition</li>
+                                        <li>Sofwere Adebe Iightroom</li>
+                                    </ul>
+                                </div>
+                                <div class="section">
+                                    <h2 id="skills">Progremming</h2>
+                                    <h5>Mengoprasikan :</h5>
+                                    <ul class="skills">
+                                        <li>Pemograman HTML</li>
+                                        <li>Pemograman JavaScrip</li>
+                                        <li>Pemograman PHP</li>
+                                        <li>Database MySql</li>
+                                    </ul>
+                                </div>
+                                <div class="section">
+                                    <h2 id="skills">Word</h2>
+                                    <h5>Mengoprasikan :</h5>
+                                    <ul class="skills">
+                                        <li>Sofwere Microsoft Word</li>
+                                        <li>Sofwere Microsoft Exsel</li>
+                                        <li>Sofwere Microsoft PowerPoin</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="skills-2">
+                            <h6><br></h6>
+                            <h2 id="skills">Portofolio</h2>
+                            <div class="card-container">
+                                <div class="card">
+                                    <img src="IMG/IMG2/Logi-1.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text">Logo Deskripsi</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="IMG/IMG2/Logi-2.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text">Logo Deskripsi</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="IMG/IMG2/Logi-3.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text">Logo Deskripsi</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="IMG/IMG2/Logi-4.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text">Logo Deskripsi</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="IMG/IMG2/SellSmart-3.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text">Logo Deskripsi</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="IMG/IMG2/VN1.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text">Logo Deskripsi</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="box-3">
+                            <div class="fs-6">
+                                <div class="section">
+                                    <p class="contact-p">Contact</p>
+                                    <h1 class="contact-p">Contact Us</h1>
+                                    <p>If you have any questions, requests, or just want to talk, don't hesitate to contact me.
+                                        You can contact me via email. I am always ready to help you with the best.</p>
+                                </div>
+                            </div>
+    
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleFormName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="exampleFormName" placeholder="Novant Nanda Pradana">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlEmail" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="exampleFormControlEmail" placeholder="name@gmail.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlMessage" class="form-label">Message</label>
+                                    <textarea class="form-control" id="exampleFormControlMessage" rows="2" placeholder="Hallo Gais...."></textarea>
+                                </div>
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button class="btn btn-primary" type="button">Submit</button>
+                                    <button class="btn btn-primary" type="button">Download CV</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row mt-2">
+
+                <div class="col-md-4">
+                    <h3>Contact Me</h3>
+                    <p>novantnandapradana11@gmail.com <br>Cikarang, Bekasi, 17330, Indonesia</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Web Category</h3>
+                    <p>Website Portfolio <br>Personal Website</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Link</h3>
+                    <p>Home <br>About <br>Educational History <br>Employment history <br>Awards <br>Skills</p>
+                </div>
+            </div>
+
+            <div class="icon-3 d-flex justify-content-center">
+                <a rel="noopener" href="https://www.linkedin.com/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a rel="noopener" href="https://www.instagram.com/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a rel="noopener" href="https://www.tiktok.com/" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a rel="noopener" href="https://twitter.com/" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="footer-p">
+                <p>Made sincerely by Novant Nanda Pradana</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
